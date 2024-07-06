@@ -1,5 +1,5 @@
-FROM node:20-alpine3.17
-LABEL maintainer="Deokgyu Yang <secugyu@gmail.com>" \
+FROM node:21-alpine
+LABEL maintainer="Teddy Seo <peiuce@gmail.com>" \
       description="Lightweight Docusaurus container with Node.js based on Alpine Linux"
 
 RUN apk add --no-cache \
