@@ -41,7 +41,7 @@ fi
 
 if [[ ! -d "$DOCU_PATH"/"$WEBSITE_NAME" ]]; then
     msg "Install docusaurus..."
-    npx @docusaurus/init@latest init "$WEBSITE_NAME" "$TEMPLATE" &
+    npx create-docusaurus@latest "$WEBSITE_NAME" "$TEMPLATE" &
     [[ "$!" -gt 0 ]] && wait $!
     ln -s "$DOCU_PATH"/"$WEBSITE_NAME" "$WEB_SRC_PATH"
     chown -R "$TARGET_UID":"$TARGET_GID" "$DOCU_PATH"
